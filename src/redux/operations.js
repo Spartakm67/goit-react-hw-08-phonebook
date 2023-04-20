@@ -4,6 +4,8 @@ import Notiflix from 'notiflix';
 
 axios.defaults.baseURL = 'https://64383367f3a0c40814ad462e.mockapi.io/api';
 
+// https://connections-api.herokuapp.com
+
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
   async (_, thunkAPI) => {
