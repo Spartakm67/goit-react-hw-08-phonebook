@@ -9,7 +9,8 @@ import Notiflix from 'notiflix';
 
 export const App = () => {
 
-const contacts = useSelector(selectContacts);
+  const contacts = useSelector(selectContacts);
+  console.log(contacts)
 const loading = useSelector(selectLoading);
 const error = useSelector(selectError);
   
