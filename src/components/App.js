@@ -4,7 +4,8 @@ import { ContactsForm } from "./ContactsForm/ContactsForm";
 import { ContactsFormList } from './ContactsFormList/ContactsFormList';
 import { Filter } from './Filter/Filter';
 import { useSelector } from 'react-redux';
-import { selectContacts, selectLoading,  selectError } from 'redux/selectors';
+import { selectContacts, selectLoading, selectError } from 'redux/selectors';
+// import { Layout } from "./Layout/Layout";
 import Notiflix from 'notiflix';
 
 export const App = () => {
@@ -19,7 +20,7 @@ const error = useSelector(selectError);
   
   return (
     <Container>
-        
+      {/* <Layout/>   */}
       <h1>Phonebook</h1>
       <ContactsForm />
       <h2>Contacts</h2>
