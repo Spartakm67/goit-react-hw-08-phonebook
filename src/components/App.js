@@ -43,6 +43,7 @@
 // });
 
 // import { useEffect, lazy } from 'react';
+import { lazy } from 'react';
 // import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout'; 
@@ -51,7 +52,7 @@ import { Layout } from './Layout/Layout';
 // import { refreshUser } from 'redux/auth/operations';
 // import { useAuth } from 'hooks';
 
-// const HomePage = lazy(() => import('../pages/Home'));
+const HomePage = lazy(() => import('pages/Home/Home'));
 // const RegisterPage = lazy(() => import('../pages/Registration'));
 // const LoginPage = lazy(() => import('../pages/Login'));
 // const ContactsPage = lazy(() => import('../pages/Contacts'));
@@ -71,7 +72,8 @@ export const App = () => {
     
    return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+       <Route path="/" element={<Layout />}>
+         <Route index element={<HomePage />}></Route>
         {/* <Route index element={<HomePage />} />
         <Route
           path="/register"
