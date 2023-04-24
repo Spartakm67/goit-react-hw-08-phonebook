@@ -5,7 +5,7 @@ export const FormLogin = styled.form`
 `;
 
 export const LoginLabel = styled.label`
-    display: flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 16px;
 `;
