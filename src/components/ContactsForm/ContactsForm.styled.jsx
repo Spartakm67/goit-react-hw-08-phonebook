@@ -10,6 +10,7 @@ width: 450px;
 padding: 10px;
 border: 1px solid black;
 border-radius:4px;
+background-color: #f7f7f7;
 `;
 const FormField = styled.label`
 gap:4px;
@@ -27,6 +28,8 @@ const FormButton = styled.button`
   font-size: 14px;
   padding: 2px 0;
   border: 1px solid gray;
+  color: #430f58;
+  background-color: #cadefc;
     &:hover {
     background-color: #bbe4e9;
     font-weight: 700;

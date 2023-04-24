@@ -1,13 +1,14 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-    padding: 50px;   
+    padding: 15px 50px 50px;   
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    background-color: #eeeeee;
     color: #8b00ff;
    `;
 

@@ -10,8 +10,9 @@ export const HomeContainer = styled.div`
   
 export const HomeTitle = styled.h1`
     font-weight: 500;
-    font-size: 48px;
+    font-size: 42px;
     text-align: center;
+    color: #234c63;
 `;
   
 export const Img = styled.img`

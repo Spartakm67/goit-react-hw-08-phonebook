@@ -10,5 +10,8 @@ export const AuthNavLink = styled(NavLink)`
   &.active {
     color: #e84a5f;
   }
+  &:hover {
+    color: #6643b5;
+  }
 `;
 
