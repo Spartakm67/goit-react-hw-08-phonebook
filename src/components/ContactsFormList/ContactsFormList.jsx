@@ -34,7 +34,7 @@ export const ContactsFormList = () => {
         <ContactsList key={contact.id}>
           <span>
             {' '}
-            {contact.name} : {contact.phone}{' '}
+            {contact.name} : {contact.number}{' '}
           </span>
           <FeedbackButton
             onClick={() => {

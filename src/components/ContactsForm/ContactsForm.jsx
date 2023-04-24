@@ -2,7 +2,7 @@ import { Formik, Field } from 'formik';
 import { Form, FormField, ErrorMessage, FormButton } from './ContactsForm.styled';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/operations'; 
 import { selectContacts, selectError } from 'redux/selectors';
 import Notiflix from 'notiflix';
 
@@ -16,7 +16,7 @@ const phoneSchema = Yup.object().shape({
     )
     .required('Required, please Add Name!!!'),
 
-  phone: Yup.string()
+  number: Yup.string()
     .matches(/\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,`Phone number must be digits and can contain spaces, dashes, parentheses and can start with +`)
     .required('Required, please Add Phone Number!!!'),
 });
@@ -26,7 +26,7 @@ export const ContactsForm = () => {
 
   const initialValue = {
   name: '',
-  phone: '',
+  number: '',
   };
   
 const dispatch = useDispatch();
@@ -46,6 +46,7 @@ const error = useSelector(selectError);
       resetForm();
       return;
     } else {
+      console.log(values);
       dispatch(addContact(values));
       resetForm();
     }
@@ -70,8 +71,8 @@ if (error) {
 
         <FormField>
           Number
-          <Field type="tel" name="phone"/>
-          <ErrorMessage name="phone" component="div" />
+          <Field type="tel" name="number"/>
+          <ErrorMessage name="number" component="div" />
         </FormField>
 
         <FormButton type="submit">Add contact</FormButton>
